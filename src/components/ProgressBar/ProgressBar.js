@@ -8,17 +8,17 @@ const STYLES = {
   small: {
     height: 8,
     padding: 0,
-    radius:4
+    radius: 4,
   },
   medium: {
     height: 12,
     padding: 0,
-    radius:¤
+    radius: 4,
   },
   large: {
     height: 16,
     padding: 4,
-    radius:8
+    radius: 8,
   },
 };
 const ProgressBar = ({ value, size }) => {
@@ -33,8 +33,10 @@ const ProgressBar = ({ value, size }) => {
       aria-valuenow={value}
       aria-valuemin="0"
       aria-valuemax="100"
-      style={{ "--padding": styles.padding + "px",
-      "--radius": styles.radius + "px" }}
+      style={{
+        "--padding": styles.padding + "px",
+        "--radius": styles.radius + "px",
+      }}
     >
       <VisuallyHidden>{value}</VisuallyHidden>
       <BarWrapper>
@@ -58,7 +60,7 @@ const Wrapper = styled.div`
   box-shadow: inset 0px 2px 4px ${COLORS.transparentGray35};
 
   padding: var(--padding);
-  border-radius:var(--radius);
+  border-radius: var(--radius);
 `;
 const Bar = styled.div`
   width: var(--width);
